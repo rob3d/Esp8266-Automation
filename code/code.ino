@@ -28,9 +28,6 @@ void setup(void) {
   pinMode(mosfet, OUTPUT);
   digitalWrite(mosfet, LOW);
   delay(1000);  
-
-  wifiManager.setConfigPortalTimeout(180);
-
   
   if (!wifiManager.autoConnect("ConfigDomotics", "12345678")) {
     Serial.println("failed to connect, we should reset as see if it connects");
